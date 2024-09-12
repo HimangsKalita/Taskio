@@ -12,5 +12,7 @@
 
     </style>
 
-    <style name="Theme.Taskio" parent="Base.Theme.Taskio" />
+    <style name="Theme.Taskio" parent="Base.Theme.Taskio">
+
+    </style>
 </resources>

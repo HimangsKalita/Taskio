@@ -1,0 +1,48 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="24dp"
+            android:height="24dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group
+                android:name="group"
+                android:pivotX="12"
+                android:pivotY="12"
+                android:scaleX="0.55"
+                android:scaleY="0.55">
+
+                <path
+                    android:name="path_1"
+                    android:pathData="M 7.25 2.388 C 8.549 2.099 10.124 2 12 2 C 13.876 2 15.451 2.099 16.75 2.388 C 18.06 2.679 19.149 3.176 19.986 4.014 C 20.824 4.851 21.321 5.94 21.612 7.25 C 21.901 8.549 22 10.124 22 12 C 22 13.876 21.901 15.451 21.612 16.75 C 21.321 18.06 20.824 19.149 19.986 19.986 C 19.149 20.824 18.06 21.321 16.75 21.612 C 15.451 21.901 13.876 22 12 22 C 10.124 22 8.549 21.901 7.25 21.612 C 5.94 21.321 4.851 20.824 4.014 19.986 C 3.176 19.149 2.679 18.06 2.388 16.75 C 2.099 15.451 2 13.876 2 12 C 2 10.124 2.099 8.549 2.388 7.25 C 2.679 5.94 3.176 4.851 4.014 4.014 C 4.851 3.176 5.94 2.679 7.25 2.388 Z M 15.707 9.293 C 16.098 9.683 16.098 10.317 15.707 10.707 L 12.024 14.39 C 11.459 14.956 10.541 14.956 9.976 14.39 L 11 13.366 L 9.976 14.39 L 8.293 12.707 C 7.902 12.317 7.902 11.683 8.293 11.293 C 8.683 10.902 9.317 10.902 9.707 11.293 L 11 12.586 L 14.293 9.293 C 14.683 8.902 15.317 8.902 15.707 9.293 Z"
+                    android:fillColor="#0077b6"
+                    android:fillType="evenOdd"/>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="group">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="scaleX"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="0.55"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+                <objectAnimator
+                    android:propertyName="scaleY"
+                    android:startOffset="200"
+                    android:duration="600"
+                    android:valueFrom="0"
+                    android:valueTo="0.55"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/overshoot_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

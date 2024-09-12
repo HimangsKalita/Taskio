@@ -6,8 +6,8 @@
 
   <group
       android:name="iconAnimationGroup"
-      android:pivotX="108"
-      android:pivotY="108">
+      android:pivotY="12"
+      android:pivotX="12">
 
     <path
         android:pathData="M0,0h24v24h-24z"

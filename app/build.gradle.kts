@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -9,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.himangskalita.taskio"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -42,6 +43,20 @@ android {
 
 dependencies {
 
+    // room
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+    kapt("androidx.room:room-compiler:$room_version")
+    implementation("androidx.core:core-ktx:1.13.1")
+    implementation("androidx.room:room-ktx:$room_version")
+
+    implementation("androidx.collection:collection-ktx:1.4.3")
+    implementation("androidx.fragment:fragment-ktx:1.8.3")
+
+    // splash screen
+    implementation("androidx.core:core-splashscreen:1.0.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -51,4 +66,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("it.xabaras.android:recyclerview-swipedecorator:1.4") //Recyclerview swipe background
 }
