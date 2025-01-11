@@ -1,0 +1,107 @@
+[
+  {
+    "taskId": 1,
+    "taskName": "Morning Run",
+    "taskDescription": "Complete a 5 km run in the park",
+    "taskCompleted": false,
+    "creationDate": "2025-01-01"
+  },
+  {
+    "taskId": 2,
+    "taskName": "Grocery Shopping",
+    "taskDescription": "Buy milk, eggs, bread, and vegetables",
+    "taskCompleted": true,
+    "creationDate": "2025-01-02"
+  },
+  {
+    "taskId": 3,
+    "taskName": "Code Review",
+    "taskDescription": "Review pull request #42 on GitHub",
+    "taskCompleted": false,
+    "creationDate": "2025-01-03"
+  },
+  {
+    "taskId": 4,
+    "taskName": "Team Meeting",
+    "taskDescription": "Attend the weekly project update meeting",
+    "taskCompleted": false,
+    "creationDate": "2025-01-03"
+  },
+  {
+    "taskId": 5,
+    "taskName": "Read Book",
+    "taskDescription": "Read 20 pages of 'Clean Code'",
+    "taskCompleted": true,
+    "creationDate": "2025-01-01"
+  },
+  {
+    "taskId": 6,
+    "taskName": "Laundry",
+    "taskDescription": "Wash, dry, and fold clothes",
+    "taskCompleted": false,
+    "creationDate": "2025-01-02"
+  },
+  {
+    "taskId": 7,
+    "taskName": "Workout",
+    "taskDescription": "Complete pull day exercises at the gym",
+    "taskCompleted": true,
+    "creationDate": "2025-01-03"
+  },
+  {
+    "taskId": 8,
+    "taskName": "Prepare Presentation",
+    "taskDescription": "Create slides for the client meeting",
+    "taskCompleted": false,
+    "creationDate": "2025-01-02"
+  },
+  {
+    "taskId": 9,
+    "taskName": "Dinner Reservation",
+    "taskDescription": "Book a table for two at 'The Olive Garden'",
+    "taskCompleted": true,
+    "creationDate": "2025-01-01"
+  },
+  {
+    "taskId": 10,
+    "taskName": "Write Blog Post",
+    "taskDescription": "Draft an article on the benefits of mindfulness",
+    "taskCompleted": false,
+    "creationDate": "2025-01-03"
+  },
+  {
+    "taskId": 11,
+    "taskName": "Car Service",
+    "taskDescription": "Take the car for its scheduled maintenance",
+    "taskCompleted": true,
+    "creationDate": "2025-01-02"
+  },
+  {
+    "taskId": 12,
+    "taskName": "Meal Prep",
+    "taskDescription": "Cook meals for the week",
+    "taskCompleted": false,
+    "creationDate": "2025-01-03"
+  },
+  {
+    "taskId": 13,
+    "taskName": "Call Mom",
+    "taskDescription": "Check in with mom and catch up",
+    "taskCompleted": true,
+    "creationDate": "2025-01-01"
+  },
+  {
+    "taskId": 14,
+    "taskName": "Organize Desk",
+    "taskDescription": "Clean and organize the home office desk",
+    "taskCompleted": false,
+    "creationDate": "2025-01-02"
+  },
+  {
+    "taskId": 15,
+    "taskName": "Update Resume",
+    "taskDescription": "Add recent projects and skills to resume",
+    "taskCompleted": true,
+    "creationDate": "2025-01-03"
+  }
+]

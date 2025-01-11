@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/task_layout_background"
+    android:gravity="center"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="10dp"
+    android:layout_marginLeft="25dp"
+    android:layout_marginRight="25dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp">
+
+    <TextView
+        android:id="@+id/tlTvTaskTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Groceries"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"/>
+
+    <CheckBox
+        android:id="@+id/tlCbTaskisCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tlTvTaskDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buy Groceries"
+        android:textSize="15sp"
+        android:textColor="@color/lightTextColor"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="60dp"
+        android:layout_below="@id/tlTvTaskTitle"/>
+    
+    <View
+        android:id="@+id/fgHsViewHorizontalLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lineColor"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/tlTvTaskDescription"/>
+
+    <TextView
+        android:id="@+id/tlTvTaskcreationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday, January 1, 2025"
+        android:textSize="15sp"
+        android:textColor="@color/textColor"
+        android:layout_below="@id/fgHsViewHorizontalLine"/>
+
+</RelativeLayout>
