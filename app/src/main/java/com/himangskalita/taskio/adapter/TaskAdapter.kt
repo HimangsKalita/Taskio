@@ -8,17 +8,18 @@ import com.himangskalita.taskio.databinding.FragmentHomeScreenTaskLayoutBinding
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-class TaskAdapter (
+class TaskAdapter(
 
-    val taskList: MutableList<Task> = mutableListOf()
+    private val taskList: MutableList<Task> = mutableListOf()
 ) : RecyclerView.Adapter<TaskAdapter.TaskHolderClass>() {
 
-    inner class TaskHolderClass(val binding: FragmentHomeScreenTaskLayoutBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class TaskHolderClass(val binding: FragmentHomeScreenTaskLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    fun updateTasks(newTaskList: List<Task>) {
+    fun updateTask(inTaskList: List<Task>) {
 
         taskList.clear()
-        taskList.addAll(newTaskList)
+        taskList.addAll(inTaskList)
         notifyDataSetChanged()
     }
 
@@ -44,11 +45,13 @@ class TaskAdapter (
         }
     }
 
-    private fun parseDate(localdate: LocalDate) : String {
+    private fun parseDate(taskDate: LocalDate): String {
 
-        val dateTimeFormatter = DateTimeFormatter.ofPattern("EEEE, MMMM d, YYYY")
+        val dtf = DateTimeFormatter.ofPattern("EEEE, MMMM d, yyyy")
 
-        return localdate.format(dateTimeFormatter)
+        taskDate.format(dtf)
+
+        return taskDate.toString()
     }
 
     override fun getItemCount(): Int {

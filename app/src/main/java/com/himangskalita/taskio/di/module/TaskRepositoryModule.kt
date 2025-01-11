@@ -1,16 +1,21 @@
-package com.himangskalita.taskio.di.component.module
+package com.himangskalita.taskio.di.module
 
 import android.content.Context
-import com.himangskalita.taskio.di.component.repository.TaskRepository
-import com.himangskalita.taskio.di.component.repository.TaskRepositoryImpl
+import com.himangskalita.taskio.di.repository.TaskRepository
+import com.himangskalita.taskio.di.repository.TaskRepositoryIml
 import dagger.Module
 import dagger.Provides
+import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.components.SingletonComponent
 
+@InstallIn(SingletonComponent::class)
 @Module
 class TaskRepositoryModule {
 
     @Provides
-    fun getTaskRepositoryImlService(context: Context) : TaskRepository {
-        return TaskRepositoryImpl(context)
+    fun getTaskRepository(@ApplicationContext context: Context) : TaskRepository {
+
+        return TaskRepositoryIml(context)
     }
 }

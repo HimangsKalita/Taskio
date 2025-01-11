@@ -1,16 +1,13 @@
 package com.himangskalita.taskio
 
 import android.app.Application
-import com.himangskalita.taskio.di.component.AppComponent
-import com.himangskalita.taskio.component.DaggerAppComponent
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class TaskioApplication : Application() {
-
-    lateinit var appComponent: AppComponent
 
     override fun onCreate() {
         super.onCreate()
-
-        appComponent = DaggerAppComponent.factory().create(this)
     }
+
 }

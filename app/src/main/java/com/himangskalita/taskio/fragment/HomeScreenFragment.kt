@@ -9,24 +9,17 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.himangskalita.taskio.TaskioApplication
 import com.himangskalita.taskio.adapter.TaskAdapter
-import com.himangskalita.taskio.component.DaggerAppComponent
 import com.himangskalita.taskio.databinding.FragmentHomeScreenBinding
-import com.himangskalita.taskio.factory.HomeScreenViewModelFactory
-import com.himangskalita.taskio.viewmodel.HomeScreenFragmentViewmodel
+import com.himangskalita.taskio.viewmodel.HomeScreenFragmentViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-
+@AndroidEntryPoint
 class HomeScreenFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeScreenBinding
-
-    private lateinit var homeScreenFragmentViewmodel: HomeScreenFragmentViewmodel
-
-    @Inject
-    lateinit var homeScreenViewModelFactory: HomeScreenViewModelFactory
-
+    private lateinit var homeScreenFragmentViewModel: HomeScreenFragmentViewModel
     private lateinit var taskAdapter: TaskAdapter
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,18 +28,16 @@ class HomeScreenFragment : Fragment() {
 
         binding = FragmentHomeScreenBinding.inflate(inflater, container, false)
 
-        (requireActivity().application as TaskioApplication).appComponent.inject(this)
-
-        homeScreenFragmentViewmodel = ViewModelProvider(this, homeScreenViewModelFactory)[HomeScreenFragmentViewmodel::class.java]
+        homeScreenFragmentViewModel = ViewModelProvider(this)[HomeScreenFragmentViewModel::class]
 
         taskAdapter = TaskAdapter()
 
         binding.fgHsRvTaskList.adapter = taskAdapter
         binding.fgHsRvTaskList.layoutManager = LinearLayoutManager(requireContext())
 
-        homeScreenFragmentViewmodel.taskList.observe(viewLifecycleOwner) { taskList ->
+        homeScreenFragmentViewModel.taskList.observe(viewLifecycleOwner) { taskList ->
 
-            taskAdapter.updateTasks(taskList)
+            taskAdapter.updateTask(taskList.toList())
         }
 
         return binding.root
